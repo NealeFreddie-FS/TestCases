@@ -1,0 +1,114 @@
+body {
+  background-color: #1e1e1e;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+  background-color: #282828;
+  width: 90%;
+  max-width: 900px;
+  height: 80vh;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.terminal-header {
+  background-color: #383838;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close {
+  background-color: #ff5f56;
+}
+.minimize {
+  background-color: #ffbd2e;
+}
+.maximize {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.terminal-content {
+  padding: 20px;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+.terminal-output {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.prompt {
+  color: #27c93f;
+  margin-bottom: 10px;
+}
+
+.test-suite {
+  margin-bottom: 20px;
+  border-left: 2px solid #444;
+  padding-left: 15px;
+}
+
+.test-name {
+  color: #4a9eff;
+}
+
+.test-result {
+  margin-left: 20px;
+}
+
+.pass {
+  color: #27c93f;
+}
+
+.fail {
+  color: #ff5f56;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #fff;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}

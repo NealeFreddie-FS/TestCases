@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Testing Terminal</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="close"></span>
+          <span class="minimize"></span>
+          <span class="maximize"></span>
+        </div>
+        <div class="terminal-title">Function Testing Terminal</div>
+      </div>
+      <div class="terminal-content">
+        <div class="prompt">Welcome to Function Testing Terminal v1.0.0</div>
+
+        <!-- Sum Array -->
+        <div class="function-section">
+          <div class="function-title">$ sumArray</div>
+          <div class="prompt">
+            Enter numbers separated by commas (e.g., 1,2,3,4):
+          </div>
+          <input type="text" id="sumArrayInput" placeholder="1,2,3,4" />
+          <button onclick="testSumArray()">Execute</button>
+          <div id="sumArrayError" class="error"></div>
+          <div id="sumArrayResult" class="success"></div>
+        </div>
+
+        <!-- Reverse String -->
+        <div class="function-section">
+          <div class="function-title">$ reverseString</div>
+          <div class="prompt">Enter a string to reverse:</div>
+          <input
+            type="text"
+            id="reverseStringInput"
+            placeholder="hello world"
+          />
+          <button onclick="testReverseString()">Execute</button>
+          <div id="reverseStringError" class="error"></div>
+          <div id="reverseStringResult" class="success"></div>
+        </div>
+
+        <!-- Is Palindrome -->
+        <div class="function-section">
+          <div class="function-title">$ isPalindrome</div>
+          <div class="prompt">Enter a string to check:</div>
+          <input
+            type="text"
+            id="palindromeInput"
+            placeholder="A man, a plan, a canal: Panama"
+          />
+          <button onclick="testIsPalindrome()">Execute</button>
+          <div id="palindromeError" class="error"></div>
+          <div id="palindromeResult" class="success"></div>
+        </div>
+
+        <!-- Find Max -->
+        <div class="function-section">
+          <div class="function-title">$ findMax</div>
+          <div class="prompt">
+            Enter numbers separated by commas (e.g., 1,2,3,4):
+          </div>
+          <input type="text" id="findMaxInput" placeholder="1,2,3,4" />
+          <button onclick="testFindMax()">Execute</button>
+          <div id="findMaxError" class="error"></div>
+          <div id="findMaxResult" class="success"></div>
+        </div>
+
+        <!-- Capitalize Words -->
+        <div class="function-section">
+          <div class="function-title">$ capitalizeWords</div>
+          <div class="prompt">Enter a string to capitalize:</div>
+          <input
+            type="text"
+            id="capitalizeWordsInput"
+            placeholder="hello beautiful world"
+          />
+          <button onclick="testCapitalizeWords()">Execute</button>
+          <div id="capitalizeWordsError" class="error"></div>
+          <div id="capitalizeWordsResult" class="success"></div>
+        </div>
+
+        <!-- Count Vowels -->
+        <div class="function-section">
+          <div class="function-title">$ countVowels</div>
+          <div class="prompt">Enter a string to count vowels:</div>
+          <input type="text" id="countVowelsInput" placeholder="hello world" />
+          <button onclick="testCountVowels()">Execute</button>
+          <div id="countVowelsError" class="error"></div>
+          <div id="countVowelsResult" class="success"></div>
+        </div>
+
+        <!-- Purge Duplicates -->
+        <div class="function-section">
+          <div class="function-title">$ purgeDuplicates</div>
+          <div class="prompt">Enter values separated by commas:</div>
+          <input
+            type="text"
+            id="purgeDuplicatesInput"
+            placeholder="1,2,2,3,true,true,hello,hello"
+          />
+          <button onclick="testPurgeDuplicates()">Execute</button>
+          <div id="purgeDuplicatesError" class="error"></div>
+          <div id="purgeDuplicatesResult" class="success"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
