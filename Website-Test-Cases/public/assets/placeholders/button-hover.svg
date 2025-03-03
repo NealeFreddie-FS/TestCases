@@ -1,0 +1,28 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Button background -->
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H190C195.523 0 200 4.47715 200 10V50C200 55.5229 195.523 60 190 60H10C4.47715 60 0 55.5229 0 50V10Z" fill="#5A5168" />
+  
+  <!-- Button inner surface -->
+  <path d="M8 14C8 10.6863 10.6863 8 14 8H186C189.314 8 192 10.6863 192 14V46C192 49.3137 189.314 52 186 52H14C10.6863 52 8 49.3137 8 46V14Z" fill="#675B71" />
+  
+  <!-- Top highlight -->
+  <rect x="14" y="8" width="172" height="6" fill="#8F7D9A" />
+  
+  <!-- Left highlight -->
+  <rect x="8" y="14" width="6" height="32" fill="#8F7D9A" />
+  
+  <!-- Bottom shadow -->
+  <rect x="14" y="46" width="172" height="6" fill="#3A3141" />
+  
+  <!-- Right shadow -->
+  <rect x="186" y="14" width="6" height="32" fill="#3A3141" />
+  
+  <!-- Pixel details -->
+  <rect x="8" y="8" width="6" height="6" fill="#8F7D9A" />
+  <rect x="186" y="8" width="6" height="6" fill="#675B71" />
+  <rect x="8" y="46" width="6" height="6" fill="#675B71" />
+  <rect x="186" y="46" width="6" height="6" fill="#3A3141" />
+  
+  <!-- Glow effect -->
+  <rect x="0" y="0" width="200" height="6" fill="#BF9D50" fill-opacity="0.2" />
+</svg> 

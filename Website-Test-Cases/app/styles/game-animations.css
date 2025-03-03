@@ -1,0 +1,212 @@
+/* Game animations for Enchanted Realms */
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0.2;
+    filter: blur(1px);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Sprite animation for characters */
+@keyframes sprite-breathe {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-sprite {
+  animation: sprite-breathe 3s ease-in-out infinite;
+}
+
+/* Flame effects */
+@keyframes flame {
+  0% {
+    filter: brightness(0.8) hue-rotate(0deg);
+    transform: scale(0.95) translateY(2px);
+    opacity: 0.8;
+  }
+  25% {
+    filter: brightness(1.1) hue-rotate(5deg);
+    transform: scale(1.05) translateY(-1px);
+    opacity: 1;
+  }
+  50% {
+    filter: brightness(0.9) hue-rotate(0deg);
+    transform: scale(1) translateY(0px);
+    opacity: 0.9;
+  }
+  75% {
+    filter: brightness(1.2) hue-rotate(-5deg);
+    transform: scale(1.02) translateY(-2px);
+    opacity: 1;
+  }
+  100% {
+    filter: brightness(0.8) hue-rotate(0deg);
+    transform: scale(0.95) translateY(2px);
+    opacity: 0.8;
+  }
+}
+
+.animate-flame {
+  animation: flame 2s ease-in-out infinite;
+}
+
+/* Button glow effect */
+@keyframes button-glow {
+  0% {
+    box-shadow: 0 0 5px 0px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px 0px rgba(255, 215, 0, 0.3);
+  }
+}
+
+.animate-glow {
+  animation: button-glow 2s ease-in-out infinite;
+}
+
+/* Ribbon flutter animation */
+@keyframes flutter {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(1deg) translateY(-2px);
+  }
+  50% {
+    transform: rotate(0deg) translateY(0);
+  }
+  75% {
+    transform: rotate(-1deg) translateY(2px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+.animate-flutter {
+  animation: flutter 4s ease-in-out infinite;
+}
+
+/* Paper scroll unfurl animation */
+@keyframes unfurl {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animate-unfurl {
+  animation: unfurl 0.6s ease-out forwards;
+  transform-origin: top center;
+}
+
+/* Custom font class for pixel art text */
+.font-pixelated {
+  font-family: "Press Start 2P", "VT323", monospace;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Interactive element hover state */
+.interactive {
+  transition: all 0.2s ease;
+  transform-origin: center;
+}
+
+.interactive:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.interactive:active {
+  transform: scale(0.95);
+}
+
+/* Shimmer effect for treasure and special items */
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}

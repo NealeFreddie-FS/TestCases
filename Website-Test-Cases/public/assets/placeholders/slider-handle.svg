@@ -1,0 +1,10 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Handle background -->
+  <circle cx="12" cy="12" r="12" fill="#5A3E2A" />
+  <circle cx="12" cy="12" r="10" fill="#8A6744" />
+  
+  <!-- Handle detail -->
+  <circle cx="12" cy="12" r="8" fill="#BF9D50" />
+  <circle cx="12" cy="12" r="4" fill="#DFCB78" />
+  <circle cx="10" cy="10" r="2" fill="white" opacity="0.5" />
+</svg> 

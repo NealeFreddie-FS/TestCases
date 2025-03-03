@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Checkbox frame -->
+  <rect width="40" height="40" rx="4" fill="#3A3141" />
+  <rect x="3" y="3" width="34" height="34" rx="2" fill="#4E4456" />
+  
+  <!-- Check mark -->
+  <path d="M8 20L16 28L32 12" stroke="#BF9D50" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+</svg> 

@@ -1,0 +1,477 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scroll-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --font-fantasy: "Cinzel", serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  /* Fantasy Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-amber-700/50 rounded-full border-2 border-solid border-amber-600/20;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-amber-600/70;
+  }
+
+  /* Focus styles */
+  :focus {
+    @apply outline-none ring-2 ring-amber-400 ring-opacity-50;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg shadow-lg border border-amber-300/30 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-1 hover:shadow-amber-300/10;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 bg-slate-800 border border-amber-400/30 rounded-md focus:ring-2 focus:ring-amber-400 text-amber-100 placeholder-slate-500;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-amber-200 mb-1;
+  }
+
+  /* Fantasy Animations */
+  .hover-glow {
+    @apply transition-all duration-300;
+    text-shadow: 0 0 0 rgba(251, 191, 36, 0);
+  }
+
+  .hover-glow:hover {
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+  }
+
+  /* Parchment Background */
+  .parchment {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(251, 191, 36, 0.05)' fill-rule='evenodd'/%3E%3C/svg%3E"),
+      linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9));
+    background-blend-mode: overlay;
+  }
+
+  /* Medieval Divider */
+  .divider-medieval {
+    @apply flex items-center my-8;
+  }
+
+  .divider-medieval::before,
+  .divider-medieval::after {
+    content: "";
+    @apply flex-1 border-t border-amber-300/30;
+  }
+
+  .divider-medieval::before {
+    @apply mr-4;
+  }
+
+  .divider-medieval::after {
+    @apply ml-4;
+  }
+}
+
+/* Fantasy Game UI Elements */
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+.fantasy-frame {
+  border: 4px solid #8b5a2b;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+  background-color: #f5e9dc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.paper-hover {
+  transition: all 0.2s ease;
+}
+
+.paper-hover:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.text-paper-brown {
+  color: #5d4037;
+}
+
+.cardinal-direction {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.north {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.south {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.east {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.west {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* AAA Game UI: Fancy Button */
+.fantasy-button {
+  background: linear-gradient(to bottom, #c19a49, #a17a29);
+  border: 2px solid #644c27;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.fantasy-button:hover {
+  background: linear-gradient(to bottom, #d4b06a, #c19a49);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.fantasy-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Fancy Parchment Background */
+.parchment-bg {
+  background-color: #f5e9dc;
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    repeating-linear-gradient(
+      rgba(122, 84, 60, 0.05) 0px,
+      rgba(122, 84, 60, 0.05) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add pixelated font for the game interface */
+@font-face {
+  font-family: "PixelFont";
+  src: url("/assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-pixelated {
+  font-family: "PixelFont", monospace;
+  letter-spacing: 0.5px;
+  text-rendering: optimizeSpeed;
+}
+
+/* Custom scrollbar styles for the game */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 40, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 191, 36, 0.7);
+}
+
+/* Add pixelated rendering for pixel art */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Custom cursor for the whole game */
+body {
+  cursor: url("/assets/placeholders/cursor.svg"), auto;
+}
+
+button,
+a,
+[role="button"],
+.interactive {
+  cursor: pointer !important;
+}
+
+/* Pixel animation effect for text */
+@keyframes pixel-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  20% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  65% {
+    opacity: 1;
+  }
+}
+
+.pixel-flicker {
+  animation: pixel-flicker 5s infinite;
+}
+
+/* Retro scanline effect */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanlines:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 1px,
+    rgba(0, 0, 0, 0.1) 1px,
+    rgba(0, 0, 0, 0.1) 2px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Pixelated text shadow */
+.pixel-text-shadow {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* Custom animations */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@layer utilities {
+  .animate-twinkle {
+    animation: twinkle 15s ease-in-out infinite;
+  }
+}
+
+/* Game mode styling */
+body.game-mode {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+html.game-mode,
+body.game-mode {
+  overflow: hidden;
+}
+
+body.game-mode nav,
+body.game-mode header,
+body.game-mode footer {
+  display: none !important;
+}
+
+/* Extremely aggressive game mode styling */
+body.game-mode {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  background-color: #000 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+html.game-mode,
+body.game-mode {
+  overflow: hidden !important;
+}
+
+/* Target all possible navigation elements */
+body.game-mode nav,
+body.game-mode header,
+body.game-mode footer,
+body.game-mode .nav,
+body.game-mode .navbar,
+body.game-mode .navigation,
+body.game-mode [class*="nav-"],
+body.game-mode [id*="nav-"],
+body.game-mode [class*="header-"],
+body.game-mode [id*="header-"],
+body.game-mode [aria-label*="navigation"],
+body.game-mode [role="navigation"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important; /* Extremely high z-index */
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(100%) !important;
+}
+
+/* Create a z-index overlay that blocks everything except game content */
+.gameWrapper {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important; /* Extremely high z-index */
+  background-color: #000 !important;
+}
+
+/* Add these specific rules to the end of the file targeting the exact navigation in the screenshot */
+
+/* Target the specific navigation from the screenshot */
+nav.bg-gradient-to-r.from-slate-900.to-indigo-950,
+nav.bg-gradient-to-r,
+/* Note: :has() and :contains() are not widely supported in CSS yet, using attribute selectors instead */
+nav[class*="bg-gradient-to-r"],
+nav[class*="from-slate-900"],
+nav[class*="to-indigo-950"],
+nav[class*="sticky"],
+nav[class*="top-0"],
+nav[class*="z-50"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(100%) !important;
+}
+
+/* Override the layout for game pages with !important */
+html[class*="game-mode"] body nav,
+body[class*="game-mode"] nav,
+html[class*="game-mode"] body > nav,
+html.game-mode nav,
+body.game-mode nav {
+  display: none !important;
+}
+
+/* Create a black overlay for game pages */
+body.game-mode::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9997;
+  pointer-events: none;
+}
+
+/* Additional styles for game wrapper */
+.gameWrapper {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* Ensure specific navigation styles */
+.sticky.top-0.z-50.shadow-lg.border-b {
+  display: none !important;
+}

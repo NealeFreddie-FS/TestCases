@@ -1,0 +1,37 @@
+<svg width="300" height="120" viewBox="0 0 300 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main container -->
+  <rect width="300" height="120" rx="8" fill="#291E33" />
+  <rect x="4" y="4" width="292" height="112" rx="6" fill="#3A3141" />
+  
+  <!-- Character icon section -->
+  <rect x="12" y="12" width="96" height="96" rx="4" fill="#4E4456" />
+  <circle cx="60" cy="48" r="24" fill="#675B71" />
+  <path d="M40 84C40 73.5066 48.5066 65 60 65V65C71.4934 65 80 73.5066 80 84V84C80 84 80 84 80 84H40C40 84 40 84 40 84V84Z" fill="#675B71" />
+  
+  <!-- Info section -->
+  <rect x="120" y="12" width="168" height="96" rx="4" fill="#4E4456" />
+  
+  <!-- Title bar -->
+  <rect x="124" y="16" width="160" height="24" rx="2" fill="#675B71" />
+  
+  <!-- Progress bars -->
+  <rect x="124" y="48" width="160" height="12" rx="2" fill="#291E33" />
+  <rect x="126" y="50" width="120" height="8" rx="1" fill="#BF9D50" />
+  
+  <rect x="124" y="68" width="160" height="12" rx="2" fill="#291E33" />
+  <rect x="126" y="70" width="80" height="8" rx="1" fill="#675B71" />
+  
+  <rect x="124" y="88" width="160" height="12" rx="2" fill="#291E33" />
+  <rect x="126" y="90" width="40" height="8" rx="1" fill="#675B71" />
+  
+  <!-- Pixel details -->
+  <rect x="12" y="12" width="8" height="8" fill="#675B71" />
+  <rect x="100" y="12" width="8" height="8" fill="#3A3141" />
+  <rect x="12" y="100" width="8" height="8" fill="#3A3141" />
+  <rect x="100" y="100" width="8" height="8" fill="#291E33" />
+  
+  <rect x="120" y="12" width="8" height="8" fill="#675B71" />
+  <rect x="280" y="12" width="8" height="8" fill="#3A3141" />
+  <rect x="120" y="100" width="8" height="8" fill="#3A3141" />
+  <rect x="280" y="100" width="8" height="8" fill="#291E33" />
+</svg> 

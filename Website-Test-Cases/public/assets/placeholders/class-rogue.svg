@@ -1,0 +1,26 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular background -->
+  <circle cx="32" cy="32" r="30" fill="#3A3141" stroke="#675B71" stroke-width="2"/>
+  
+  <!-- Dagger -->
+  <path d="M25 40L40 25" stroke="#BF9D50" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 43L25 40L28 43L25 46L22 43Z" fill="#BF9D50"/>
+  
+  <!-- Dagger details -->
+  <path d="M40 25L45 20" stroke="#DFCB78" stroke-width="2" stroke-linecap="round"/>
+  <path d="M41 24L42 23M43 22L44 21" stroke="#BF9D50" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Lockpick -->
+  <path d="M16 30C16 28 18 26 20 26L24 26L24 28L20 28C19 28 18 29 18 30L18 34" stroke="#DFCB78" stroke-width="1"/>
+  <rect x="17" y="34" width="2" height="6" fill="#DFCB78"/>
+  
+  <!-- Coin/stolen goods -->
+  <circle cx="44" cy="40" r="4" fill="#BF9D50"/>
+  <circle cx="44" cy="40" r="2" fill="#DFCB78"/>
+  <circle cx="38" cy="44" r="3" fill="#BF9D50"/>
+  <circle cx="38" cy="44" r="1.5" fill="#DFCB78"/>
+  
+  <!-- Stealth shadow effect -->
+  <path d="M32 15C24 15 18 20 16 26" stroke="#675B71" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <path d="M48 38C48 46 42 52 32 52" stroke="#675B71" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
+</svg> 

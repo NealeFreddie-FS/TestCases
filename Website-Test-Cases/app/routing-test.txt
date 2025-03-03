@@ -1,0 +1,9 @@
+This is a test file to check if the filesystem is working correctly.
+
+Routes that should work:
+- / (home)
+- /new-game (character creation)
+- /game (actual game)
+- /test-page (diagnostic page)
+
+If you can see this file, the filesystem is working. 

@@ -1,0 +1,14 @@
+<svg width="500" height="100" viewBox="0 0 500 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title panel background -->
+  <rect width="500" height="100" rx="12" fill="#5A3E2A" />
+  <rect x="8" y="8" width="484" height="84" rx="8" fill="#8A6744" />
+  
+  <!-- Decorative golden border -->
+  <rect x="15" y="15" width="470" height="70" rx="4" fill="#A88B66" stroke="#D1B991" stroke-width="2" />
+  
+  <!-- Pixel corners for pixel art aesthetic -->
+  <rect x="8" y="8" width="12" height="12" fill="#BF9D50" />
+  <rect x="480" y="8" width="12" height="12" fill="#BF9D50" />
+  <rect x="8" y="80" width="12" height="12" fill="#BF9D50" />
+  <rect x="480" y="80" width="12" height="12" fill="#BF9D50" />
+</svg> 

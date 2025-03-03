@@ -1,0 +1,163 @@
+/* Main Pause Menu Overlay */
+.pauseMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Main Menu Container */
+.pauseMenu {
+  width: 90%;
+  max-width: 1200px;
+  height: 85%;
+  background-color: rgba(20, 20, 20, 0.95);
+  border: 2px solid #c2a254;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Menu Title */
+.menuTitle {
+  text-align: center;
+  color: #c2a254;
+  font-size: 2rem;
+  font-family: "Times New Roman", serif;
+  margin: 1rem 0;
+  text-shadow: 0 0 8px rgba(194, 162, 84, 0.6);
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+/* Tab Navigation */
+.menuTabs {
+  display: flex;
+  border-bottom: 2px solid #444;
+  background-color: rgba(30, 30, 30, 0.7);
+}
+
+.tabButton {
+  flex: 1;
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Times New Roman", serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.tabButton:hover {
+  color: #ddd;
+}
+
+.tabButton.active {
+  color: #c2a254;
+}
+
+.tabButton.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #c2a254;
+}
+
+/* Menu Content Area */
+.menuContent {
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Menu Controls */
+.menuControls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-top: 1px solid #444;
+}
+
+.controlHint {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.keyHint {
+  display: inline-block;
+  background-color: #333;
+  color: #c2a254;
+  border: 1px solid #c2a254;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pauseMenu {
+    width: 95%;
+    height: 95%;
+  }
+
+  .menuTitle {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .tabButton {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .menuContent {
+    padding: 10px;
+  }
+
+  .menuControls {
+    padding: 10px;
+  }
+
+  .controlHint {
+    font-size: 0.8rem;
+  }
+
+  .keyHint {
+    padding: 2px 4px;
+    font-size: 0.7rem;
+  }
+}

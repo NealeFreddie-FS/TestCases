@@ -1,0 +1,10 @@
+<svg width="300" height="60" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Button background -->
+  <rect width="300" height="60" rx="10" fill="#524846" />
+  <rect x="4" y="4" width="292" height="52" rx="8" fill="#756D6C" />
+  <!-- Pixel border for pixel art aesthetic -->
+  <rect x="4" y="4" width="292" height="8" fill="#9A9290" />
+  <rect x="4" y="48" width="292" height="8" fill="#3D3636" />
+  <rect x="4" y="12" width="8" height="36" fill="#9A9290" />
+  <rect x="288" y="12" width="8" height="36" fill="#3D3636" />
+</svg> 

@@ -1,0 +1,17 @@
+<svg width="200" height="30" viewBox="0 0 200 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Progress bar background -->
+  <rect width="200" height="30" rx="4" fill="#3A3141" />
+  <rect x="3" y="3" width="194" height="24" rx="2" fill="#291E33" />
+  
+  <!-- Progress indicator (60% filled) -->
+  <rect x="5" y="5" width="114" height="20" rx="1" fill="#BF9D50" />
+  
+  <!-- Progress markers for pixel aesthetic -->
+  <rect x="25" y="5" width="2" height="20" fill="#3A3141" opacity="0.3" />
+  <rect x="50" y="5" width="2" height="20" fill="#3A3141" opacity="0.3" />
+  <rect x="75" y="5" width="2" height="20" fill="#3A3141" opacity="0.3" />
+  <rect x="100" y="5" width="2" height="20" fill="#3A3141" opacity="0.3" />
+  <rect x="125" y="5" width="2" height="20" fill="#3A3141" opacity="0.3" />
+  <rect x="150" y="5" width="2" height="20" fill="#3A3141" opacity="0.3" />
+  <rect x="175" y="5" width="2" height="20" fill="#3A3141" opacity="0.3" />
+</svg> 

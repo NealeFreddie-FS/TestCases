@@ -1,0 +1,18 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Achievement outer border -->
+  <circle cx="40" cy="40" r="38" fill="#3A3141" stroke="#756D6C" stroke-width="4" />
+  
+  <!-- Achievement inner fill -->
+  <circle cx="40" cy="40" r="34" fill="#4E4456" />
+  
+  <!-- Lock icon -->
+  <rect x="30" y="35" width="20" height="20" rx="2" fill="#756D6C" />
+  <rect x="35" y="25" width="10" height="15" rx="5" stroke="#756D6C" stroke-width="4" fill="none" />
+  
+  <!-- Decorative elements -->
+  <circle cx="40" cy="40" r="26" fill="#756D6C" opacity="0.1" />
+  <circle cx="40" cy="40" r="20" stroke="#756D6C" stroke-width="2" stroke-dasharray="4 2" fill="none" />
+  
+  <!-- Question mark overlay -->
+  <text x="40" y="49" font-family="monospace" font-size="18" text-anchor="middle" fill="#9A9290" font-weight="bold">?</text>
+</svg> 

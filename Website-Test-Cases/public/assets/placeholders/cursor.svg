@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main cursor shape -->
+  <path d="M8 4L8 20L12 16L16 24L20 22L16 14L20 14L8 4Z" fill="white" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Pixel details -->
+  <rect x="10" y="8" width="2" height="2" fill="#FFCC00"/>
+  <rect x="14" y="16" width="2" height="2" fill="#FFCC00"/>
+</svg> 

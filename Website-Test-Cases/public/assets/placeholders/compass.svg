@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="95" stroke="#D1B991" stroke-width="10" />
+  
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="70" fill="#4E4456" stroke="#8A6744" stroke-width="4" />
+  
+  <!-- North pointer -->
+  <path d="M100 10L115 70H85L100 10Z" fill="#BF2C34" />
+  
+  <!-- South pointer -->
+  <path d="M100 190L85 130H115L100 190Z" fill="#475693" />
+  
+  <!-- East pointer -->
+  <path d="M190 100L130 115V85L190 100Z" fill="#8E8E8E" />
+  
+  <!-- West pointer -->
+  <path d="M10 100L70 85V115L10 100Z" fill="#8E8E8E" />
+  
+  <!-- Center dot -->
+  <circle cx="100" cy="100" r="10" fill="#D1B991" />
+  
+  <!-- Cardinal direction labels -->
+  <text x="100" y="35" fill="#D1B991" font-family="monospace" font-size="20" text-anchor="middle" font-weight="bold">N</text>
+  <text x="100" y="175" fill="#D1B991" font-family="monospace" font-size="20" text-anchor="middle" font-weight="bold">S</text>
+  <text x="175" y="105" fill="#D1B991" font-family="monospace" font-size="20" text-anchor="middle" font-weight="bold">E</text>
+  <text x="25" y="105" fill="#D1B991" font-family="monospace" font-size="20" text-anchor="middle" font-weight="bold">W</text>
+</svg> 

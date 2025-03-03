@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular background -->
+  <circle cx="32" cy="32" r="30" fill="#3A3141" stroke="#675B71" stroke-width="2"/>
+  
+  <!-- Magic staff -->
+  <path d="M24 48L40 16" stroke="#BF9D50" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Staff orb -->
+  <circle cx="41" cy="14" r="5" fill="#BF9D50"/>
+  <circle cx="41" cy="14" r="3" fill="#DFCB78"/>
+  
+  <!-- Magic sparkles -->
+  <path d="M48 22L50 20M48 28L52 28M44 36L46 38" stroke="#DFCB78" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 20L33 18M32 26L28 26M36 34L34 36" stroke="#DFCB78" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Magic runes -->
+  <rect x="20" y="42" width="6" height="2" rx="1" fill="#DFCB78"/>
+  <rect x="22" y="38" width="4" height="2" rx="1" fill="#DFCB78"/>
+  <rect x="18" y="46" width="8" height="2" rx="1" fill="#DFCB78"/>
+  
+  <!-- Magic aura effect -->
+  <circle cx="41" cy="14" r="8" stroke="#DFCB78" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="2 2"/>
+</svg> 

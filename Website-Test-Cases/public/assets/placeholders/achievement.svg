@@ -1,0 +1,16 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Achievement outer border -->
+  <circle cx="40" cy="40" r="38" fill="#3A3141" stroke="#BF9D50" stroke-width="4" />
+  
+  <!-- Achievement inner fill -->
+  <circle cx="40" cy="40" r="34" fill="#4E4456" />
+  
+  <!-- Achievement star -->
+  <path d="M40 14L44.9 28.2H60L47.5 37.1L52.5 51.3L40 42.4L27.5 51.3L32.5 37.1L20 28.2H35.1L40 14Z" fill="#BF9D50" />
+  
+  <!-- Achievement glow effect -->
+  <circle cx="40" cy="40" r="26" fill="#BF9D50" opacity="0.1" />
+  
+  <!-- Achievement decorative ring -->
+  <circle cx="40" cy="40" r="20" stroke="#BF9D50" stroke-width="2" stroke-dasharray="4 2" fill="none" />
+</svg> 

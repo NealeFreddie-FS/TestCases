@@ -1,0 +1,14 @@
+<svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tab background -->
+  <path d="M0 8C0 3.58172 3.58172 0 8 0H142C146.418 0 150 3.58172 150 8V40H0V8Z" fill="#3A3141" />
+  <path d="M4 8C4 5.79086 5.79086 4 8 4H142C144.209 4 146 5.79086 146 8V36H4V8Z" fill="#4E4456" />
+  
+  <!-- Tab highlight (top) -->
+  <rect x="8" y="4" width="134" height="4" fill="#675B71" />
+  
+  <!-- Left edge highlight -->
+  <rect x="4" y="8" width="4" height="28" fill="#675B71" />
+  
+  <!-- Right edge shadow -->
+  <rect x="142" y="8" width="4" height="28" fill="#291E33" />
+</svg> 

@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Portrait frame -->
+  <rect width="120" height="120" rx="8" fill="#3A3141" />
+  <rect x="4" y="4" width="112" height="112" rx="6" fill="#4E4456" />
+  
+  <!-- Character silhouette -->
+  <circle cx="60" cy="45" r="20" fill="#675B71" />
+  <path d="M40 70C40 60 50 55 60 55C70 55 80 60 80 70V90H40V70Z" fill="#675B71" />
+  
+  <!-- Pixel details -->
+  <rect x="4" y="4" width="112" height="6" fill="#675B71" />
+  <rect x="4" y="110" width="112" height="6" fill="#291E33" />
+  <rect x="4" y="10" width="6" height="100" fill="#675B71" />
+  <rect x="110" y="10" width="6" height="100" fill="#291E33" />
+  
+  <!-- Character features -->
+  <circle cx="53" cy="43" r="4" fill="#3A3141" />
+  <circle cx="67" cy="43" r="4" fill="#3A3141" />
+  <path d="M50 55C55 60 65 60 70 55" stroke="#3A3141" stroke-width="2" stroke-linecap="round" />
+</svg> 

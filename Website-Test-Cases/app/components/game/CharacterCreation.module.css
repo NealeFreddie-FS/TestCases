@@ -1,0 +1,284 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #d5d5d5;
+  background-color: #0a0a0a;
+  background-image: radial-gradient(
+    circle at center,
+    #3a1c00 0%,
+    #150a00 50%,
+    #000000 100%
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: auto;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.8);
+  z-index: 1;
+}
+
+.title {
+  font-family: "Times New Roman", serif;
+  font-size: 4rem;
+  color: #c2a254;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 10px #ff6600, 0 0 20px #d98830;
+  z-index: 2;
+  position: relative;
+}
+
+.creationContainer {
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 2px solid #c2a254;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 2;
+  position: relative;
+}
+
+.stepTitle {
+  font-size: 1.8rem;
+  color: #d7c181;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Times New Roman", serif;
+}
+
+/* Name Selection */
+.nameSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameInput {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: #242424;
+  color: #d5d5d5;
+  border: 1px solid #c2a254;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.nameInput:focus {
+  outline: none;
+  border-color: #d7c181;
+  box-shadow: 0 0 8px rgba(215, 193, 129, 0.5);
+}
+
+/* Class Selection */
+.classSelection {
+  display: flex;
+  flex-direction: column;
+}
+
+.classOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.classOption {
+  background-color: #242424;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.classOption:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-2px);
+}
+
+.classOption.selected {
+  border: 2px solid #c2a254;
+  background-color: #33302a;
+  box-shadow: 0 0 8px rgba(215, 193, 129, 0.3);
+}
+
+.classOption h3 {
+  font-size: 1.3rem;
+  color: #d7c181;
+  margin-bottom: 0.5rem;
+}
+
+.classDescription {
+  font-size: 0.9rem;
+  color: #a9a9a9;
+  margin-bottom: 1rem;
+}
+
+.statGrid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.statColumn {
+  flex: 1;
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  color: #a9a9a9;
+  font-size: 0.8rem;
+}
+
+.statValue {
+  color: #d7c181;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/* Confirm Step */
+.confirmStep {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmationDetails {
+  background-color: #242424;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.characterSummary {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 1rem;
+}
+
+.characterSummary h3 {
+  font-size: 1.5rem;
+  color: #d7c181;
+  margin-bottom: 0.5rem;
+}
+
+.classSummary {
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #a9a9a9;
+}
+
+.statSummary h4 {
+  font-size: 1.1rem;
+  color: #d7c181;
+  margin-bottom: 0.75rem;
+}
+
+/* Navigation Buttons */
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.backButton,
+.nextButton,
+.startButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.backButton {
+  background-color: #333;
+  color: #d5d5d5;
+}
+
+.backButton:hover {
+  background-color: #444;
+}
+
+.nextButton {
+  background-color: #775e1e;
+  color: #d5d5d5;
+}
+
+.nextButton:hover {
+  background-color: #8f701f;
+}
+
+.startButton {
+  background-color: #8f701f;
+  color: #d5d5d5;
+  padding: 0.75rem 2rem;
+}
+
+.startButton:hover {
+  background-color: #c2a254;
+  color: #242424;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .creationContainer {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .classOptions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .stepTitle {
+    font-size: 1.5rem;
+  }
+
+  .navigationButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .backButton,
+  .nextButton,
+  .startButton {
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+<svg width="1500" height="300" viewBox="0 0 1500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background mountains -->
+  <!-- Far mountain range -->
+  <path d="M0 300L150 180L250 220L350 150L450 200L550 140L650 170L750 120L850 170L950 130L1050 180L1150 140L1250 190L1350 150L1450 170L1500 160L1500 300L0 300Z" fill="#291E33" />
+  
+  <!-- Middle mountain range -->
+  <path d="M0 300L50 250L150 210L250 260L350 230L450 270L520 200L600 240L700 180L800 250L900 220L1000 260L1100 200L1200 240L1300 220L1400 250L1500 220L1500 300L0 300Z" fill="#3A3141" />
+  
+  <!-- Close mountain range -->
+  <path d="M0 300L100 270L200 290L300 260L400 280L500 250L600 270L700 240L800 260L900 240L1000 270L1100 250L1200 280L1300 260L1400 290L1500 270L1500 300L0 300Z" fill="#4E4456" />
+  
+  <!-- Snow caps -->
+  <path d="M750 120L770 126L790 120L810 126L830 120L850 130L865 170L835 170L815 150L785 170L765 150L735 170L750 120Z" fill="#E6E0EB" fill-opacity="0.7" />
+  <path d="M520 200L540 206L560 200L580 210L595 240L565 240L545 220L515 240L520 200Z" fill="#E6E0EB" fill-opacity="0.7" />
+  <path d="M1100 200L1120 206L1140 200L1160 206L1180 200L1200 210L1215 240L1185 240L1165 220L1135 240L1115 220L1085 240L1100 200Z" fill="#E6E0EB" fill-opacity="0.7" />
+  
+  <!-- Stars in the sky -->
+  <circle cx="100" cy="50" r="2" fill="#E6E0EB" fill-opacity="0.8" />
+  <circle cx="300" cy="30" r="1.5" fill="#E6E0EB" fill-opacity="0.6" />
+  <circle cx="500" cy="70" r="2" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="700" cy="40" r="1.5" fill="#E6E0EB" fill-opacity="0.8" />
+  <circle cx="900" cy="60" r="2" fill="#E6E0EB" fill-opacity="0.6" />
+  <circle cx="1100" cy="50" r="1.5" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="1300" cy="30" r="2" fill="#E6E0EB" fill-opacity="0.8" />
+  <circle cx="1450" cy="70" r="1.5" fill="#E6E0EB" fill-opacity="0.7" />
+  
+  <circle cx="150" cy="100" r="1" fill="#E6E0EB" fill-opacity="0.6" />
+  <circle cx="350" cy="80" r="1" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="550" cy="110" r="1" fill="#E6E0EB" fill-opacity="0.6" />
+  <circle cx="750" cy="90" r="1" fill="#E6E0EB" fill-opacity="0.8" />
+  <circle cx="950" cy="100" r="1" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="1150" cy="80" r="1" fill="#E6E0EB" fill-opacity="0.6" />
+  <circle cx="1350" cy="110" r="1" fill="#E6E0EB" fill-opacity="0.7" />
+</svg> 

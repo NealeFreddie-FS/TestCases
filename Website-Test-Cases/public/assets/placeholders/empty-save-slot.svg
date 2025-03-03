@@ -1,0 +1,33 @@
+<svg width="300" height="120" viewBox="0 0 300 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main container -->
+  <rect width="300" height="120" rx="8" fill="#291E33" />
+  <rect x="4" y="4" width="292" height="112" rx="6" fill="#3A3141" />
+  
+  <!-- Character icon section -->
+  <rect x="12" y="12" width="96" height="96" rx="4" fill="#4E4456" />
+  <circle cx="60" cy="60" r="28" fill="#291E33" stroke="#4E4456" stroke-width="2" stroke-dasharray="4 4" />
+  <path d="M54 60L60 66L66 60M60 66V54" stroke="#4E4456" stroke-width="2" />
+  
+  <!-- Info section -->
+  <rect x="120" y="12" width="168" height="96" rx="4" fill="#4E4456" />
+  
+  <!-- Content -->
+  <rect x="140" y="40" width="128" height="4" rx="1" fill="#291E33" />
+  <rect x="140" y="52" width="128" height="4" rx="1" fill="#291E33" />
+  <rect x="140" y="64" width="96" height="4" rx="1" fill="#291E33" />
+  <rect x="140" y="76" width="64" height="4" rx="1" fill="#291E33" />
+  
+  <!-- Placeholder text -->
+  <rect x="140" y="28" width="64" height="6" rx="1" fill="#675B71" />
+  
+  <!-- Pixel details -->
+  <rect x="12" y="12" width="8" height="8" fill="#675B71" />
+  <rect x="100" y="12" width="8" height="8" fill="#3A3141" />
+  <rect x="12" y="100" width="8" height="8" fill="#3A3141" />
+  <rect x="100" y="100" width="8" height="8" fill="#291E33" />
+  
+  <rect x="120" y="12" width="8" height="8" fill="#675B71" />
+  <rect x="280" y="12" width="8" height="8" fill="#3A3141" />
+  <rect x="120" y="100" width="8" height="8" fill="#3A3141" />
+  <rect x="280" y="100" width="8" height="8" fill="#291E33" />
+</svg> 

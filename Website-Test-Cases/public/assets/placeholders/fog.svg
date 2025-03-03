@@ -1,0 +1,31 @@
+<svg width="1500" height="100" viewBox="0 0 1500 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fog clouds -->
+  <path d="M0 60 C50 40, 100 70, 150 60 C200 50, 250 70, 300 60 C350 50, 400 70, 450 60 C500 50, 550 70, 600 60 C650 50, 700 70, 750 60" stroke="#E6E0EB" stroke-width="10" stroke-linecap="round" />
+  <path d="M750 60 C800 40, 850 70, 900 60 C950 50, 1000 70, 1050 60 C1100 50, 1150 70, 1200 60 C1250 50, 1300 70, 1350 60 C1400 50, 1450 70, 1500 60" stroke="#E6E0EB" stroke-width="10" stroke-linecap="round" />
+  
+  <path d="M0 30 C30 20, 60 40, 90 30 C120 20, 150 40, 180 30 C210 20, 240 40, 270 30 C300 20, 330 40, 360 30 C390 20, 420 40, 450 30" stroke="#E6E0EB" stroke-width="8" stroke-linecap="round" stroke-opacity="0.7" />
+  <path d="M450 30 C480 20, 510 40, 540 30 C570 20, 600 40, 630 30 C660 20, 690 40, 720 30 C750 20, 780 40, 810 30 C840 20, 870 40, 900 30" stroke="#E6E0EB" stroke-width="8" stroke-linecap="round" stroke-opacity="0.7" />
+  <path d="M900 30 C930 20, 960 40, 990 30 C1020 20, 1050 40, 1080 30 C1110 20, 1140 40, 1170 30 C1200 20, 1230 40, 1260 30 C1290 20, 1320 40, 1350 30" stroke="#E6E0EB" stroke-width="8" stroke-linecap="round" stroke-opacity="0.7" />
+  <path d="M1350 30 C1380 20, 1410 40, 1440 30 C1470 20, 1500 40, 1530 30" stroke="#E6E0EB" stroke-width="8" stroke-linecap="round" stroke-opacity="0.7" />
+  
+  <path d="M100 80 C140 70, 180 90, 220 80 C260 70, 300 90, 340 80 C380 70, 420 90, 460 80 C500 70, 540 90, 580 80 C620 70, 660 90, 700 80" stroke="#E6E0EB" stroke-width="6" stroke-linecap="round" stroke-opacity="0.5" />
+  <path d="M700 80 C740 70, 780 90, 820 80 C860 70, 900 90, 940 80 C980 70, 1020 90, 1060 80 C1100 70, 1140 90, 1180 80 C1220 70, 1260 90, 1300 80" stroke="#E6E0EB" stroke-width="6" stroke-linecap="round" stroke-opacity="0.5" />
+  <path d="M1300 80 C1340 70, 1380 90, 1420 80 C1460 70, 1500 90, 1540 80" stroke="#E6E0EB" stroke-width="6" stroke-linecap="round" stroke-opacity="0.5" />
+  
+  <!-- Small fog particles -->
+  <circle cx="75" cy="50" r="5" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="175" cy="70" r="3" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="275" cy="40" r="4" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="375" cy="60" r="3" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="475" cy="45" r="5" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="575" cy="65" r="4" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="675" cy="55" r="3" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="775" cy="70" r="5" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="875" cy="45" r="4" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="975" cy="60" r="3" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="1075" cy="50" r="5" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="1175" cy="65" r="4" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="1275" cy="55" r="3" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="1375" cy="45" r="5" fill="#E6E0EB" fill-opacity="0.7" />
+  <circle cx="1475" cy="60" r="4" fill="#E6E0EB" fill-opacity="0.7" />
+</svg> 

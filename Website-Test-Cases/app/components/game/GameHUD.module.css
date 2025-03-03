@@ -1,0 +1,206 @@
+/* Main HUD Container */
+.hudContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks through to the game */
+  z-index: 100;
+  color: #d8d8d8;
+  font-family: "Cinzel", serif;
+  user-select: none;
+}
+
+/* Top left stats (souls, humanity) */
+.statsContainer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.soulsContainer,
+.humanityContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #7d7761;
+  padding: 6px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.soulsIcon,
+.humanityIcon {
+  margin-right: 8px;
+  color: #c4a559;
+}
+
+.soulsCount,
+.humanityCount {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #e8d7a9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Health and Stamina Bars */
+.barsContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 25%;
+}
+
+.barWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.barLabel {
+  width: 35px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #c4a559;
+  text-align: right;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.healthBar,
+.staminaBar {
+  height: 16px;
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #7d7761;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.healthFill {
+  height: 100%;
+  background: linear-gradient(to right, #8a0303, #c10303);
+  transition: width 0.3s ease;
+}
+
+.staminaFill {
+  height: 100%;
+  background: linear-gradient(to right, #576b13, #8ead2e);
+  transition: width 0.3s ease;
+}
+
+.barValue {
+  width: 85px;
+  font-size: 0.8rem;
+  color: #e8d7a9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Quick Items - Bottom Right */
+.quickItemsContainer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quickItem {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #7d7761;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.itemIcon {
+  font-size: 1.8rem;
+  color: #e8d7a9;
+}
+
+.itemCount {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 0.9rem;
+  color: #e8d7a9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Center Bottom - Equipped Items */
+.equippedContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.equippedWeapon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #7d7761;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.weaponIcon {
+  font-size: 2.2rem;
+  color: #e8d7a9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .barsContainer {
+    width: 40%;
+  }
+
+  .quickItem,
+  .equippedWeapon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .itemIcon,
+  .weaponIcon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsContainer {
+    top: 10px;
+    left: 10px;
+  }
+
+  .barsContainer {
+    width: 55%;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .quickItemsContainer {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .equippedContainer {
+    bottom: 10px;
+  }
+}

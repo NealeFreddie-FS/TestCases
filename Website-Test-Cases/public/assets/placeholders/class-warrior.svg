@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular background -->
+  <circle cx="32" cy="32" r="30" fill="#3A3141" stroke="#675B71" stroke-width="2"/>
+  
+  <!-- Shield -->
+  <path d="M32 14L44 19V29C44 38 38 43 32 46C26 43 20 38 20 29V19L32 14Z" fill="#675B71" stroke="#BF9D50" stroke-width="2"/>
+  
+  <!-- Sword -->
+  <path d="M32 22V40" stroke="#BF9D50" stroke-width="4" stroke-linecap="round"/>
+  <path d="M26 28H38" stroke="#BF9D50" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Handle of sword -->
+  <rect x="30" y="40" width="4" height="8" fill="#BF9D50"/>
+  <rect x="28" y="48" width="8" height="2" fill="#DFCB78"/>
+  
+  <!-- Shield emblem -->
+  <circle cx="32" cy="28" r="4" fill="#BF9D50"/>
+  
+  <!-- Highlights -->
+  <path d="M32 16L42 20V28C42 35 38 40 32 42" stroke="#DFCB78" stroke-width="1" stroke-opacity="0.5"/>
+</svg> 

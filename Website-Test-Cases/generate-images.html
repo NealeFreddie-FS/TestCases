@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Generator</title>
+    <script>
+      function generateImages() {
+        // Create a canvas for the enemy sprite
+        const enemyCanvas = document.createElement("canvas");
+        enemyCanvas.width = 16;
+        enemyCanvas.height = 16;
+        const enemyCtx = enemyCanvas.getContext("2d");
+
+        // Fill with red
+        enemyCtx.fillStyle = "red";
+        enemyCtx.fillRect(0, 0, 16, 16);
+
+        // Add some details
+        enemyCtx.fillStyle = "black";
+        enemyCtx.fillRect(4, 4, 2, 2); // Eye
+        enemyCtx.fillRect(10, 4, 2, 2); // Eye
+
+        // Create a link to download the enemy sprite
+        const enemyLink = document.createElement("a");
+        enemyLink.href = enemyCanvas.toDataURL("image/png");
+        enemyLink.download = "default.png";
+        enemyLink.textContent = "Download Enemy Sprite";
+        document.body.appendChild(enemyLink);
+        document.body.appendChild(document.createElement("br"));
+
+        // Create a canvas for the background images
+        const bgCanvas = document.createElement("canvas");
+        bgCanvas.width = 800;
+        bgCanvas.height = 600;
+        const bgCtx = bgCanvas.getContext("2d");
+
+        // Create a gradient for menu-bg
+        const menuGrad = bgCtx.createLinearGradient(0, 0, 800, 600);
+        menuGrad.addColorStop(0, "#123456");
+        menuGrad.addColorStop(1, "#345678");
+        bgCtx.fillStyle = menuGrad;
+        bgCtx.fillRect(0, 0, 800, 600);
+
+        // Add some text
+        bgCtx.fillStyle = "white";
+        bgCtx.font = "36px Arial";
+        bgCtx.fillText("Menu Background", 250, 300);
+
+        // Create a link to download menu-bg
+        const menuLink = document.createElement("a");
+        menuLink.href = bgCanvas.toDataURL("image/jpeg");
+        menuLink.download = "menu-bg.jpg";
+        menuLink.textContent = "Download Menu Background";
+        document.body.appendChild(menuLink);
+        document.body.appendChild(document.createElement("br"));
+
+        // Clear for character bg
+        bgCtx.clearRect(0, 0, 800, 600);
+
+        // Create a gradient for character-bg
+        const charGrad = bgCtx.createLinearGradient(0, 0, 800, 600);
+        charGrad.addColorStop(0, "#553300");
+        charGrad.addColorStop(1, "#775522");
+        bgCtx.fillStyle = charGrad;
+        bgCtx.fillRect(0, 0, 800, 600);
+
+        // Add some text
+        bgCtx.fillStyle = "white";
+        bgCtx.font = "36px Arial";
+        bgCtx.fillText("Character Background", 225, 300);
+
+        // Create a link to download character-bg
+        const charLink = document.createElement("a");
+        charLink.href = bgCanvas.toDataURL("image/jpeg");
+        charLink.download = "character-bg.jpg";
+        charLink.textContent = "Download Character Background";
+        document.body.appendChild(charLink);
+        document.body.appendChild(document.createElement("br"));
+
+        // Create a canvas for the favicon
+        const faviconCanvas = document.createElement("canvas");
+        faviconCanvas.width = 32;
+        faviconCanvas.height = 32;
+        const faviconCtx = faviconCanvas.getContext("2d");
+
+        // Fill with game-themed color
+        faviconCtx.fillStyle = "#772211";
+        faviconCtx.fillRect(0, 0, 32, 32);
+
+        // Add a simple icon
+        faviconCtx.fillStyle = "#ffcc00";
+        faviconCtx.beginPath();
+        faviconCtx.moveTo(16, 8);
+        faviconCtx.lineTo(24, 24);
+        faviconCtx.lineTo(8, 24);
+        faviconCtx.closePath();
+        faviconCtx.fill();
+
+        // Create a link to download the favicon
+        const faviconLink = document.createElement("a");
+        faviconLink.href = faviconCanvas.toDataURL("image/png");
+        faviconLink.download = "favicon.ico";
+        faviconLink.textContent = "Download Favicon";
+        document.body.appendChild(faviconLink);
+      }
+
+      window.onload = generateImages;
+    </script>
+  </head>
+  <body>
+    <h1>Game Asset Generator</h1>
+    <p>Click on the links below to download the placeholder assets:</p>
+  </body>
+</html>

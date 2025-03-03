@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular background -->
+  <circle cx="32" cy="32" r="30" fill="#3A3141" stroke="#675B71" stroke-width="2"/>
+  
+  <!-- Bow -->
+  <path d="M24 16C20 22 18 30 18 32C18 34 20 42 24 48" stroke="#BF9D50" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Bowstring -->
+  <path d="M24 16L24 48" stroke="#DFCB78" stroke-width="1"/>
+  
+  <!-- Arrow -->
+  <path d="M24 32L44 32" stroke="#DFCB78" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Arrow head -->
+  <path d="M44 32L40 29L40 35L44 32Z" fill="#BF9D50"/>
+  
+  <!-- Arrow feathers -->
+  <path d="M26 32L28 28M26 32L28 36" stroke="#BF9D50" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Leaves/nature elements -->
+  <path d="M18 20C16 20 14 22 14 24" stroke="#DFCB78" stroke-width="1" stroke-linecap="round"/>
+  <path d="M18 44C16 44 14 42 14 40" stroke="#DFCB78" stroke-width="1" stroke-linecap="round"/>
+  
+  <circle cx="17" cy="22" r="1" fill="#DFCB78"/>
+  <circle cx="17" cy="42" r="1" fill="#DFCB78"/>
+  
+  <!-- Target -->
+  <circle cx="48" cy="32" r="4" stroke="#BF9D50" stroke-width="1" stroke-dasharray="2 1"/>
+  <circle cx="48" cy="32" r="1" fill="#BF9D50"/>
+</svg> 

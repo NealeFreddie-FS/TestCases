@@ -1,0 +1,392 @@
+/* Sanctuary Page Styles */
+
+.sanctuary-page {
+  background-color: #0a0a14;
+  color: #e0d8c0;
+  font-family: "Pixel", "Courier New", monospace;
+  overflow-x: hidden;
+}
+
+.sanctuary-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.sanctuary-container.fade-in {
+  opacity: 1;
+}
+
+.sanctuary-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 100%);
+}
+
+.sanctuary-light-rays {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(80, 60, 120, 0.2) 0%,
+    rgba(10, 10, 20, 0) 70%
+  );
+  z-index: -1;
+}
+
+.decorations {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+}
+
+.candle {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 30px;
+  background-color: #d0c8a0;
+  border-radius: 2px;
+}
+
+.flame {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 15px;
+  background-color: #ff9d00;
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: 0 0 10px 5px rgba(255, 157, 0, 0.5);
+}
+
+/* Floating particles */
+.floating-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 215, 0, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-particle linear infinite;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+/* Audio toggle */
+.audio-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.audio-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.audio-icon {
+  font-size: 1.2rem;
+}
+
+.sanctuary-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.sanctuary-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  color: #e0d8c0;
+}
+
+.sanctuary-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.tome-container {
+  perspective: 1000px;
+}
+
+.sacred-tome {
+  width: 300px;
+  height: 400px;
+  background-color: #562f0d;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.sacred-tome:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+.tome-cover {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.tome-emblem {
+  width: 100px;
+  height: 100px;
+  background-color: #c8a45c;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.tome-emblem:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: #562f0d;
+  border-radius: 50%;
+}
+
+.tome-emblem:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: #a08040;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, #ffd700 30%, transparent 30%);
+  background-size: 15px 15px;
+}
+
+.tome-title {
+  font-size: 1.5rem;
+  color: #c8a45c;
+  text-align: center;
+  margin: 0;
+}
+
+.tome-prompt {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.prompt-text {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  animation: blink 2s infinite;
+}
+
+.tome-content {
+  width: 600px;
+  height: 400px;
+  background-color: #e0d8c0;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tome-pages {
+  flex: 1;
+  display: flex;
+}
+
+.tome-page {
+  flex: 1;
+  padding: 2rem;
+  color: #3a2e1f;
+}
+
+.left-page {
+  background-color: #e0d8c0;
+  border-right: 1px solid #a0906a;
+}
+
+.right-page {
+  background-color: #d8d0b8;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  color: #562f0d;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.page-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Class description */
+.class-description {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(160, 140, 80, 0.2);
+  border-radius: 4px;
+  border-left: 3px solid #562f0d;
+}
+
+.class-description h3 {
+  color: #562f0d;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.class-description p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.page-action {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.adventure-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #562f0d;
+  color: #ffd700;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.adventure-button:hover {
+  background-color: #7a4a20;
+  transform: scale(1.05);
+}
+
+.tome-close {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #562f0d;
+  color: #e0d8c0;
+  cursor: pointer;
+}
+
+.tome-close:hover {
+  background-color: #7a4a20;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sanctuary-title {
+    font-size: 2rem;
+  }
+
+  .tome-content {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .tome-pages {
+    flex-direction: column;
+  }
+
+  .left-page {
+    border-right: none;
+    border-bottom: 1px solid #a0906a;
+  }
+}
+
+@media (max-width: 480px) {
+  .sanctuary-main {
+    padding: 1rem;
+  }
+
+  .sacred-tome {
+    width: 250px;
+    height: 350px;
+  }
+
+  .tome-emblem {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tome-page {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.3rem;
+  }
+}

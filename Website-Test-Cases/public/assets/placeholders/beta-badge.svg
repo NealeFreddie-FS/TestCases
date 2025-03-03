@@ -1,0 +1,12 @@
+<svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge background -->
+  <rect width="80" height="40" rx="20" fill="#BF2C34" />
+  <rect x="3" y="3" width="74" height="34" rx="17" fill="#D1454D" />
+  
+  <!-- Pixel decoration for corners -->
+  <rect x="10" y="8" width="60" height="3" fill="#E5757C" />
+  <rect x="10" y="29" width="60" height="3" fill="#901E23" />
+  
+  <!-- Shine effect -->
+  <rect x="20" y="8" width="40" height="3" fill="#F5A0A5" />
+</svg> 

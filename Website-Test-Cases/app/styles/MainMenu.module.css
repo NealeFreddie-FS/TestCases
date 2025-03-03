@@ -1,0 +1,615 @@
+/* Main container */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e6e0eb;
+  font-family: "PixelFont", "VT323", monospace;
+  overflow: hidden;
+  cursor: none;
+}
+
+/* Loading screen */
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #291e33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loadingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.loadingTitle {
+  font-size: 3rem;
+  color: #bf9d50;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 10px rgba(191, 157, 80, 0.5);
+}
+
+.loadingBar {
+  width: 300px;
+  height: 20px;
+  background-color: #3a3141;
+  border: 2px solid #675b71;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.loadingBarFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #bf9d50;
+  width: 0%;
+  animation: fillLoading 1.5s ease-in-out forwards;
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  color: #675b71;
+}
+
+/* Background with parallax effect */
+.backgroundLayers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bgSky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #291e33 0%, #3a3141 100%);
+}
+
+.bgMountains {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-image: url("/assets/placeholders/mountains.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: contain;
+  transform: translateZ(-10px) scale(1.1);
+}
+
+.bgTrees {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-image: url("/assets/placeholders/trees.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: contain;
+  transform: translateZ(-5px) scale(1.05);
+}
+
+.bgFog {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 20%;
+  background-image: url("/assets/placeholders/fog.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: contain;
+  opacity: 0.4;
+  animation: fogMovement 60s linear infinite;
+}
+
+/* Title */
+.titleContainer {
+  margin-bottom: 2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #bf9d50;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #675b71;
+  letter-spacing: 1px;
+}
+
+/* Main menu panel */
+.menuPanel {
+  width: 80%;
+  max-width: 1000px;
+  background-image: url("/assets/placeholders/panel.svg");
+  background-size: 100% 100%;
+  padding: 24px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+/* Tab navigation */
+.tabNavigation {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.tabButton {
+  background-image: url("/assets/placeholders/tab.svg");
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  height: 40px;
+  min-width: 150px;
+  font-size: 1.2rem;
+  color: #675b71;
+  cursor: none;
+  margin-right: 8px;
+  font-family: "PixelFont", "VT323", monospace;
+  transition: filter 0.2s ease;
+}
+
+.tabButton:hover {
+  filter: brightness(1.1);
+}
+
+.activeTab {
+  background-image: url("/assets/placeholders/tab-active.svg");
+  color: #bf9d50;
+}
+
+/* Tab content */
+.tabContent {
+  padding: 16px;
+  background-color: #4e4456;
+  border-radius: 4px;
+}
+
+/* Play tab */
+.playTab {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #bf9d50;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #675b71;
+  padding-bottom: 0.5rem;
+}
+
+.saveSlotList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.saveSlot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.saveSlot:hover {
+  background-color: rgba(103, 91, 113, 0.2);
+}
+
+.saveSlotInfo {
+  position: relative;
+  width: 300px;
+}
+
+.saveSlotOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 132px;
+  padding-right: 16px;
+}
+
+.saveSlotName {
+  font-size: 1.3rem;
+  color: #bf9d50;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.saveSlotDetails {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #e6e0eb;
+}
+
+.saveSlotActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.actionButton {
+  background-image: url("/assets/placeholders/button.svg");
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  min-width: 120px;
+  height: 60px;
+  font-size: 1.1rem;
+  color: #e6e0eb;
+  cursor: none;
+  font-family: "PixelFont", "VT323", monospace;
+  transition: filter 0.2s ease;
+}
+
+.actionButton:hover {
+  background-image: url("/assets/placeholders/button-hover.svg");
+  filter: brightness(1.1);
+}
+
+.actionButton:active {
+  background-image: url("/assets/placeholders/button-active.svg");
+  filter: brightness(0.9);
+}
+
+.deleteButton {
+  color: #ff6b6b;
+}
+
+.secondaryButton {
+  opacity: 0.8;
+}
+
+/* Settings tab */
+.settingsTab {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsGroup {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(42, 37, 48, 0.5);
+  border-radius: 4px;
+}
+
+.settingsGroupTitle {
+  font-size: 1.4rem;
+  color: #bf9d50;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #675b71;
+  padding-bottom: 0.5rem;
+}
+
+.settingItem {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.settingItem label {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.sliderContainer {
+  width: 100%;
+  height: 20px;
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  outline: none;
+  z-index: 2;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: #bf9d50;
+  border: 2px solid #675b71;
+  border-radius: 50%;
+  cursor: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #bf9d50;
+  border: 2px solid #675b71;
+  border-radius: 50%;
+  cursor: none;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #291e33;
+  transform: translateY(-50%);
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: none;
+}
+
+.checkboxWrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.customCheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #291e33;
+  border: 2px solid #675b71;
+  border-radius: 4px;
+}
+
+.settingsActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Achievements tab */
+.achievementsTab {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievementList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.achievement {
+  display: flex;
+  padding: 1rem;
+  background-color: rgba(42, 37, 48, 0.5);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.achievement:hover {
+  background-color: rgba(42, 37, 48, 0.8);
+}
+
+.achievementIcon {
+  margin-right: 1rem;
+}
+
+.achievementInfo {
+  flex: 1;
+}
+
+.achievementTitle {
+  font-size: 1.3rem;
+  color: #bf9d50;
+  margin-bottom: 0.5rem;
+}
+
+.achievementDescription {
+  font-size: 1rem;
+  color: #e6e0eb;
+  margin-bottom: 1rem;
+}
+
+.achievementProgress {
+  display: flex;
+  align-items: center;
+}
+
+.progressBar {
+  flex: 1;
+  height: 12px;
+  background-color: #291e33;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #bf9d50;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 0.9rem;
+  color: #675b71;
+  min-width: 80px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1000px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #675b71;
+  z-index: 2;
+}
+
+/* Custom cursor */
+.customCursor {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background-image: url("/assets/placeholders/cursor.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+/* Animations */
+@keyframes fillLoading {
+  0% {
+    width: 5%;
+  }
+  20% {
+    width: 20%;
+  }
+  50% {
+    width: 40%;
+  }
+  70% {
+    width: 60%;
+  }
+  90% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fogMovement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .menuPanel {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .tabButton {
+    min-width: auto;
+    flex: 1;
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .saveSlotInfo {
+    width: 200px;
+  }
+
+  .saveSlotOverlay {
+    padding-left: 90px;
+  }
+
+  .saveSlotActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .actionButton {
+    min-width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .customCursor {
+    display: block;
+  }
+}
+
+/* Cursor animations */
+@keyframes cursorPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.customCursor.clicking {
+  animation: cursorPulse 0.3s ease;
+}

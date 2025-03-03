@@ -1,0 +1,60 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Parchment background -->
+  <rect width="500" height="500" fill="#E8D4B7" />
+  
+  <!-- Grid lines for map -->
+  <g stroke="#BF9D50" stroke-width="1" opacity="0.3">
+    <line x1="50" y1="0" x2="50" y2="500" />
+    <line x1="100" y1="0" x2="100" y2="500" />
+    <line x1="150" y1="0" x2="150" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="250" y1="0" x2="250" y2="500" />
+    <line x1="300" y1="0" x2="300" y2="500" />
+    <line x1="350" y1="0" x2="350" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="450" y1="0" x2="450" y2="500" />
+    
+    <line x1="0" y1="50" x2="500" y2="50" />
+    <line x1="0" y1="100" x2="500" y2="100" />
+    <line x1="0" y1="150" x2="500" y2="150" />
+    <line x1="0" y1="200" x2="500" y2="200" />
+    <line x1="0" y1="250" x2="500" y2="250" />
+    <line x1="0" y1="300" x2="500" y2="300" />
+    <line x1="0" y1="350" x2="500" y2="350" />
+    <line x1="0" y1="400" x2="500" y2="400" />
+    <line x1="0" y1="450" x2="500" y2="450" />
+  </g>
+  
+  <!-- Map features -->
+  <!-- Mountains -->
+  <path d="M100 100L150 50L200 100L150 80Z" fill="#A89078" />
+  <path d="M120 120L170 70L220 120L170 100Z" fill="#A89078" />
+  
+  <!-- Forest -->
+  <circle cx="300" cy="150" r="50" fill="#517559" opacity="0.7" />
+  <circle cx="330" cy="180" r="40" fill="#517559" opacity="0.7" />
+  
+  <!-- Water -->
+  <circle cx="400" cy="350" r="70" fill="#5B88A5" opacity="0.7" />
+  
+  <!-- Desert -->
+  <circle cx="150" cy="350" r="60" fill="#D6C278" opacity="0.7" />
+  
+  <!-- Castle at center -->
+  <rect x="240" y="240" width="20" height="20" fill="#8C8C8C" />
+  
+  <!-- Roads -->
+  <line x1="250" y1="250" x2="250" y2="150" stroke="#AF9D80" stroke-width="3" stroke-dasharray="5 2" />
+  <line x1="250" y1="250" x2="350" y2="350" stroke="#AF9D80" stroke-width="3" stroke-dasharray="5 2" />
+  <line x1="250" y1="250" x2="150" y2="350" stroke="#AF9D80" stroke-width="3" stroke-dasharray="5 2" />
+  <line x1="250" y1="250" x2="150" y2="100" stroke="#AF9D80" stroke-width="3" stroke-dasharray="5 2" />
+  
+  <!-- Map border frame -->
+  <rect x="5" y="5" width="490" height="490" stroke="#8A6744" stroke-width="10" stroke-opacity="0.7" fill="none" />
+  
+  <!-- Decorative corners -->
+  <path d="M5 5L20 20H40V40H20L5 20V5Z" fill="#8A6744" opacity="0.7" />
+  <path d="M495 5L480 20H460V40H480L495 20V5Z" fill="#8A6744" opacity="0.7" />
+  <path d="M5 495L20 480H40V460H20L5 480V495Z" fill="#8A6744" opacity="0.7" />
+  <path d="M495 495L480 480H460V460H480L495 480V495Z" fill="#8A6744" opacity="0.7" />
+</svg> 
