@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeCheck Pro - Terminal</title>
+    <link rel="stylesheet" href="css/macTerminal.css" />
+  </head>
+  <body>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="close"></span>
+          <span class="minimize"></span>
+          <span class="maximize"></span>
+        </div>
+        <div class="terminal-title">CodeCheck Pro - Code Execution</div>
+      </div>
+      <div class="terminal-content">
+        <div class="terminal-output" id="terminal-output">
+          <div class="prompt">$ python code_sample.py</div>
+          <div id="execution-output">
+            <!-- Execution output will be displayed here -->
+            Running code...<span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Sample function to simulate code execution
+      function simulateCodeExecution(code, language) {
+        const outputElement = document.getElementById("execution-output");
+        const terminalTitle = document.querySelector(".terminal-title");
+
+        // Update terminal title based on language
+        terminalTitle.textContent = `CodeCheck Pro - ${
+          language.charAt(0).toUpperCase() + language.slice(1)
+        } Execution`;
+
+        // Show loading state
+        outputElement.innerHTML = `Running ${language} code...<span class="cursor"></span>`;
+
+        // Simulate execution delay
+        setTimeout(() => {
+          let output = "";
+
+          if (language === "python") {
+            if (code.includes("print(") && !code.includes("syntax error")) {
+              output = code.includes("Hello, World!")
+                ? "Hello, World!"
+                : "Execution successful!";
+            } else {
+              output = "Error: Invalid syntax";
+            }
+          } else if (language === "javascript") {
+            if (
+              code.includes("console.log(") &&
+              !code.includes("syntax error")
+            ) {
+              output = code.includes("Hello, World!")
+                ? "Hello, World!"
+                : "Execution successful!";
+            } else {
+              output = "Error: Invalid syntax";
+            }
+          }
+
+          // Display test results
+          outputElement.innerHTML = `
+          <div>${output}</div>
+          <div class="test-suite">
+            <div class="test-name">Running test suite...</div>
+            <div class="test-result pass">✓ Test 1: Basic functionality</div>
+            <div class="test-result pass">✓ Test 2: Output formatting</div>
+            <div class="test-result fail">✗ Test 3: Edge case handling</div>
+            <div class="test-result pass">✓ Test 4: Performance check</div>
+          </div>
+          <div class="prompt">$ <span class="cursor"></span></div>
+        `;
+        }, 1500);
+      }
+
+      // Simulate execution on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        const sampleCode = 'print("Hello, World!")';
+        simulateCodeExecution(sampleCode, "python");
+      });
+    </script>
+  </body>
+</html>

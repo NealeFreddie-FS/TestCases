@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeCheck Pro - Terminal Demo</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #f5f7fa;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .demo-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .demo-header h1 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+      .demo-header p {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+      }
+      .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      .demo-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 1.5rem;
+      }
+      .demo-card h2 {
+        margin-bottom: 1rem;
+        color: var(--dark-color);
+      }
+      .code-input {
+        margin-bottom: 1rem;
+      }
+      .code-input textarea {
+        width: 100%;
+        height: 150px;
+        padding: 0.75rem;
+        border: 1px solid #ced4da;
+        border-radius: var(--border-radius);
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        resize: vertical;
+      }
+      .demo-actions {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .back-link {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body class="pattern-bg">
+    <div class="floating-dots" id="floating-dots"></div>
+
+    <header class="gradient-bg">
+      <nav>
+        <div class="logo">
+          <h1><span class="text-gradient">CodeCheck</span> Pro</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="index.html#demo">Demo</a></li>
+          <li>
+            <a href="index.html#contact" class="btn primary btn-sm">Contact</a>
+          </li>
+        </ul>
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="hero-content text-center">
+          <div class="badge"><span>Demo</span> Interactive Terminal</div>
+          <h1 class="hero-title">
+            Try Our <span class="text-gradient">Terminal</span> Demo
+          </h1>
+          <p class="hero-subtitle">
+            Experience how CodeCheck Pro executes and grades code in real-time
+            with our interactive terminal demo.
+          </p>
+        </div>
+      </div>
+      <div class="wave-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70">
+          <path
+            d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,53.3C1120,53,1280,43,1360,37.3L1440,32L1440,70L1360,70C1280,70,1120,70,960,70C800,70,640,70,480,70C320,70,160,70,80,70L0,70Z"
+          ></path>
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <section class="demo-section">
+        <div class="container">
+          <h2 class="section-title text-center">Code Execution Demo</h2>
+          <p class="text-center">
+            Try running different code examples and see how our terminal
+            displays the results.
+          </p>
+
+          <div class="demo-grid">
+            <div class="demo-card card">
+              <div class="demo-card-header">
+                <h3><i class="fab fa-python"></i> Python Example</h3>
+              </div>
+              <div class="demo-card-body">
+                <div class="code-input">
+                  <label for="python-code">Code:</label>
+                  <textarea
+                    id="python-code"
+                    class="form-control code-editor"
+                    rows="8"
+                  >
+def calculate_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+# Test the function
+scores = [95, 82, 71, 65, 55]
+for score in scores:
+    grade = calculate_grade(score)
+    print(f"Score: {score}, Grade: {grade}")</textarea
+                  >
+                </div>
+                <div class="demo-actions">
+                  <button id="run-python" class="btn primary">
+                    <i class="fas fa-play"></i> Run Code
+                  </button>
+                  <button id="reset-python" class="btn secondary">
+                    <i class="fas fa-redo"></i> Reset
+                  </button>
+                </div>
+                <div class="terminal-container">
+                  <div class="terminal">
+                    <div class="terminal-header">
+                      <div class="terminal-buttons">
+                        <div class="terminal-button close"></div>
+                        <div class="terminal-button minimize"></div>
+                        <div class="terminal-button maximize"></div>
+                      </div>
+                      <div class="terminal-title">python - CodeCheck Pro</div>
+                    </div>
+                    <div class="terminal-content" id="python-terminal">
+                      <div class="terminal-prompt">
+                        python grade_calculator.py
+                      </div>
+                      <div class="terminal-output" id="python-output"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-card card">
+              <div class="demo-card-header">
+                <h3><i class="fab fa-js"></i> JavaScript Example</h3>
+              </div>
+              <div class="demo-card-body">
+                <div class="code-input">
+                  <label for="js-code">Code:</label>
+                  <textarea
+                    id="js-code"
+                    class="form-control code-editor"
+                    rows="8"
+                  >
+function calculateFactorial(n) {
+    if (n === 0 || n === 1) {
+      return 1;
+    }
+    return n * calculateFactorial(n - 1);
+  }
+
+  // Test the function
+  const numbers = [5, 6, 7, 8];
+  numbers.forEach(num => {
+    const result = calculateFactorial(num);
+    console.log(`Factorial of ${num} is ${result}`);
+  });</textarea
+                  >
+                </div>
+                <div class="demo-actions">
+                  <button id="run-js" class="btn primary">
+                    <i class="fas fa-play"></i> Run Code
+                  </button>
+                  <button id="reset-js" class="btn secondary">
+                    <i class="fas fa-redo"></i> Reset
+                  </button>
+                </div>
+                <div class="terminal-container">
+                  <div class="terminal">
+                    <div class="terminal-header">
+                      <div class="terminal-buttons">
+                        <div class="terminal-button close"></div>
+                        <div class="terminal-button minimize"></div>
+                        <div class="terminal-button maximize"></div>
+                      </div>
+                      <div class="terminal-title">node - CodeCheck Pro</div>
+                    </div>
+                    <div class="terminal-content" id="js-terminal">
+                      <div class="terminal-prompt">node factorial.js</div>
+                      <div class="terminal-output" id="js-output"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-card card">
+              <div class="demo-card-header">
+                <h3><i class="fas fa-bug"></i> Error Handling Demo</h3>
+              </div>
+              <div class="demo-card-body">
+                <div class="code-input">
+                  <label for="error-code">Code with Error:</label>
+                  <textarea
+                    id="error-code"
+                    class="form-control code-editor"
+                    rows="8"
+                  >
+def divide_numbers(a, b):
+    return a / b
+
+# This will cause a division by zero error
+result = divide_numbers(10, 0)
+print(f"Result: {result}")</textarea
+                  >
+                </div>
+                <div class="demo-actions">
+                  <button id="run-error" class="btn primary">
+                    <i class="fas fa-play"></i> Run Code
+                  </button>
+                  <button id="reset-error" class="btn secondary">
+                    <i class="fas fa-redo"></i> Reset
+                  </button>
+                </div>
+                <div class="terminal-container">
+                  <div class="terminal">
+                    <div class="terminal-header">
+                      <div class="terminal-buttons">
+                        <div class="terminal-button close"></div>
+                        <div class="terminal-button minimize"></div>
+                        <div class="terminal-button maximize"></div>
+                      </div>
+                      <div class="terminal-title">python - CodeCheck Pro</div>
+                    </div>
+                    <div class="terminal-content" id="error-terminal">
+                      <div class="terminal-prompt">python error_example.py</div>
+                      <div class="terminal-output" id="error-output"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-lg">
+            <a href="index.html" class="btn secondary"
+              ><i class="fas fa-arrow-left"></i> Back to Home</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2><span class="text-gradient">CodeCheck</span> Pro</h2>
+            <p>Automated Grading System</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#how-it-works">How It Works</a></li>
+              <li><a href="index.html#demo">Demo</a></li>
+              <li><a href="terminal-demo.html">Terminal Demo</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> info@codecheckpro.com</p>
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 CodeCheck Pro. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create floating dots
+        const dotsContainer = document.getElementById("floating-dots");
+        const numDots = 20;
+
+        for (let i = 0; i < numDots; i++) {
+          const dot = document.createElement("div");
+          dot.classList.add("dot");
+
+          // Random size between 10px and 50px
+          const size = Math.floor(Math.random() * 40) + 10;
+          dot.style.width = `${size}px`;
+          dot.style.height = `${size}px`;
+
+          // Random position
+          const posX = Math.floor(Math.random() * 100);
+          const posY = Math.floor(Math.random() * 100);
+          dot.style.left = `${posX}%`;
+          dot.style.top = `${posY}%`;
+
+          // Random animation duration between 20s and 40s
+          const duration = Math.floor(Math.random() * 20) + 20;
+          dot.style.animation = `float ${duration}s ease-in-out infinite`;
+
+          // Random animation delay
+          const delay = Math.floor(Math.random() * 10);
+          dot.style.animationDelay = `${delay}s`;
+
+          dotsContainer.appendChild(dot);
+        }
+
+        // Mobile menu toggle
+        document
+          .querySelector(".mobile-menu-toggle")
+          .addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+          });
+
+        // Python demo
+        const pythonCode = document.getElementById("python-code");
+        const pythonOutput = document.getElementById("python-output");
+        const runPython = document.getElementById("run-python");
+        const resetPython = document.getElementById("reset-python");
+
+        runPython.addEventListener("click", function () {
+          pythonOutput.innerHTML = '<div class="terminal-cursor"></div>';
+          simulateExecution(pythonOutput, getPythonOutput(pythonCode.value));
+        });
+
+        resetPython.addEventListener("click", function () {
+          pythonCode.value = `def calculate_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+# Test the function
+scores = [95, 82, 71, 65, 55]
+for score in scores:
+    grade = calculate_grade(score)
+    print(f"Score: {score}, Grade: {grade}")`;
+          pythonOutput.innerHTML = "";
+        });
+
+        // JavaScript demo
+        const jsCode = document.getElementById("js-code");
+        const jsOutput = document.getElementById("js-output");
+        const runJs = document.getElementById("run-js");
+        const resetJs = document.getElementById("reset-js");
+
+        runJs.addEventListener("click", function () {
+          jsOutput.innerHTML = '<div class="terminal-cursor"></div>';
+          simulateExecution(jsOutput, getJsOutput(jsCode.value));
+        });
+
+        resetJs.addEventListener("click", function () {
+          jsCode.value = `function calculateFactorial(n) {
+    if (n === 0 || n === 1) {
+      return 1;
+    }
+    return n * calculateFactorial(n - 1);
+  }
+
+  // Test the function
+  const numbers = [5, 6, 7, 8];
+  numbers.forEach(num => {
+    const result = calculateFactorial(num);
+    console.log(\`Factorial of \${num} is \${result}\`);
+  });`;
+          jsOutput.innerHTML = "";
+        });
+
+        // Error demo
+        const errorCode = document.getElementById("error-code");
+        const errorOutput = document.getElementById("error-output");
+        const runError = document.getElementById("run-error");
+        const resetError = document.getElementById("reset-error");
+
+        runError.addEventListener("click", function () {
+          errorOutput.innerHTML = '<div class="terminal-cursor"></div>';
+          simulateExecution(errorOutput, getErrorOutput(errorCode.value));
+        });
+
+        resetError.addEventListener("click", function () {
+          errorCode.value = `def divide_numbers(a, b):
+    return a / b
+
+# This will cause a division by zero error
+result = divide_numbers(10, 0)
+print(f"Result: {result}")`;
+          errorOutput.innerHTML = "";
+        });
+
+        // Helper functions
+        function simulateExecution(outputElement, result) {
+          let i = 0;
+          const typingSpeed = 10; // ms per character
+
+          function typeNextChar() {
+            if (i < result.length) {
+              outputElement.innerHTML =
+                result.substring(0, i + 1) +
+                '<div class="terminal-cursor"></div>';
+              i++;
+              setTimeout(typeNextChar, typingSpeed);
+            }
+          }
+
+          // Simulate a short delay before execution starts
+          setTimeout(function () {
+            typeNextChar();
+          }, 500);
+        }
+
+        function getPythonOutput(code) {
+          // Simulate Python execution output
+          return `Score: 95, Grade: A
+Score: 82, Grade: B
+Score: 71, Grade: C
+Score: 65, Grade: D
+Score: 55, Grade: F
+
+<div class="test-suite">
+  <div class="test-result pass">Test passed: calculate_grade returns correct grade for A range</div>
+  <div class="test-result pass">Test passed: calculate_grade returns correct grade for B range</div>
+  <div class="test-result pass">Test passed: calculate_grade returns correct grade for C range</div>
+  <div class="test-result pass">Test passed: calculate_grade returns correct grade for D range</div>
+  <div class="test-result pass">Test passed: calculate_grade returns correct grade for F range</div>
+</div>
+
+All tests passed! Score: 100%`;
+        }
+
+        function getJsOutput(code) {
+          // Simulate JavaScript execution output
+          return `Factorial of 5 is 120
+Factorial of 6 is 720
+Factorial of 7 is 5040
+Factorial of 8 is 40320
+
+<div class="test-suite">
+  <div class="test-result pass">Test passed: calculateFactorial returns 1 for input 0</div>
+  <div class="test-result pass">Test passed: calculateFactorial returns 1 for input 1</div>
+  <div class="test-result pass">Test passed: calculateFactorial returns correct value for input 5</div>
+  <div class="test-result pass">Test passed: calculateFactorial returns correct value for input 8</div>
+</div>
+
+All tests passed! Score: 100%`;
+        }
+
+        function getErrorOutput(code) {
+          // Simulate error output
+          return `Traceback (most recent call last):
+    File "error_example.py", line 4, in <module>
+      result = divide_numbers(10, 0)
+    File "error_example.py", line 2, in divide_numbers
+      return a / b
+ZeroDivisionError: division by zero
+
+<div class="test-suite">
+  <div class="test-result pass">Test passed: Function divide_numbers is defined</div>
+  <div class="test-result fail">Test failed: Function should handle division by zero</div>
+  <div class="test-result fail">Test failed: Expected error handling for edge cases</div>
+</div>
+
+Tests failed! Score: 33%`;
+        }
+      });
+    </script>
+
+    <style>
+      /* Additional styles specific to the terminal demo page */
+      .demo-section {
+        padding: 5rem 0;
+      }
+
+      .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .demo-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .demo-card-header {
+        padding: 1.5rem;
+        background-color: var(--color-neutral-50);
+        border-bottom: 1px solid var(--color-neutral-200);
+      }
+
+      .demo-card-header h3 {
+        margin: 0;
+        color: var(--color-primary-900);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .demo-card-header i {
+        color: var(--color-primary-500);
+      }
+
+      .demo-card-body {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .code-input {
+        margin-bottom: 1rem;
+      }
+
+      .demo-actions {
+        display: flex;
+        gap: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .demo-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </body>
+</html>

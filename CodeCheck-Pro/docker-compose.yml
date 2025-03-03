@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  # Python execution environment
+  python-runner:
+    image: python:3.9-slim
+    container_name: codecheck-python
+    volumes:
+      - ./temp:/code
+    working_dir: /code
+    command: tail -f /dev/null
+    restart: unless-stopped
+    networks:
+      - codecheck-network
+    mem_limit: 256m
+    cpus: 0.5
+    security_opt:
+      - no-new-privileges=true
+    cap_drop:
+      - ALL
+
+  # JavaScript execution environment
+  javascript-runner:
+    image: node:18
+    container_name: codecheck-javascript
+    volumes:
+      - ./temp:/code
+    working_dir: /code
+    command: tail -f /dev/null
+    restart: unless-stopped
+    networks:
+      - codecheck-network
+    mem_limit: 256m
+    cpus: 0.5
+    security_opt:
+      - no-new-privileges=true
+    cap_drop:
+      - ALL
+
+networks:
+  codecheck-network:
+    driver: bridge

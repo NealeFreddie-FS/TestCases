@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - CodeCheck Pro</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      .pricing-section {
+        padding: 5rem 0;
+      }
+
+      .pricing-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+      }
+
+      .toggle-label {
+        font-weight: 600;
+        color: var(--color-neutral-600);
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        margin: 0 1rem;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-neutral-300);
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+
+      .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 22px;
+        width: 22px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .toggle-slider {
+        background-color: var(--color-primary-500);
+      }
+
+      input:checked + .toggle-slider:before {
+        transform: translateX(30px);
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .pricing-highlight {
+        position: absolute;
+        top: 0;
+        right: 2rem;
+        background-color: var(--color-accent-500);
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      .pricing-save {
+        display: inline-block;
+        background-color: var(--color-accent-100);
+        color: var(--color-accent-800);
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+      }
+
+      .faq-section {
+        padding: 5rem 0;
+        background-color: var(--color-neutral-50);
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .faq-item {
+        margin-bottom: 1.5rem;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--color-neutral-900);
+      }
+
+      .faq-answer {
+        color: var(--color-neutral-600);
+      }
+
+      .comparison-section {
+        padding: 5rem 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 3rem;
+        box-shadow: var(--shadow-md);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid var(--color-neutral-200);
+      }
+
+      .comparison-table th {
+        background-color: var(--color-primary-50);
+        font-weight: 600;
+        color: var(--color-primary-900);
+      }
+
+      .comparison-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .comparison-table td:first-child {
+        text-align: left;
+        font-weight: 500;
+        color: var(--color-neutral-800);
+      }
+
+      .comparison-feature {
+        color: var(--color-success-500);
+      }
+
+      .comparison-no-feature {
+        color: var(--color-neutral-400);
+      }
+
+      .enterprise-cta {
+        padding: 4rem 0;
+        background: linear-gradient(
+          135deg,
+          var(--color-secondary-700),
+          var(--color-secondary-500)
+        );
+        color: white;
+        text-align: center;
+      }
+
+      .enterprise-cta h2 {
+        color: white;
+        margin-bottom: 1.5rem;
+      }
+
+      .enterprise-cta p {
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      @media (max-width: 768px) {
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .comparison-table {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="pattern-bg">
+    <div class="floating-dots" id="floating-dots"></div>
+
+    <header class="gradient-bg">
+      <nav>
+        <div class="logo">
+          <h1><span class="text-gradient">CodeCheck</span> Pro</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="index.html#demo">Demo</a></li>
+          <li><a href="terminal-demo.html">Terminal Demo</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li>
+            <a href="index.html#contact" class="btn primary btn-sm">Contact</a>
+          </li>
+        </ul>
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="hero-content text-center">
+          <div class="badge">
+            <span class="badge-primary">Simple</span> Transparent Pricing
+          </div>
+          <h1 class="hero-title">
+            Choose the Perfect <span class="text-gradient">Plan</span> for Your
+            Needs
+          </h1>
+          <p class="hero-subtitle">
+            Flexible pricing options designed for educational institutions of
+            all sizes
+          </p>
+        </div>
+      </div>
+      <div class="wave-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70">
+          <path
+            d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,53.3C1120,53,1280,43,1360,37.3L1440,32L1440,70L1360,70C1280,70,1120,70,960,70C800,70,640,70,480,70C320,70,160,70,80,70L0,70Z"
+          ></path>
+        </svg>
+      </div>
+    </header>
+
+    <section class="pricing-section">
+      <div class="container">
+        <div class="pricing-toggle">
+          <span class="toggle-label">Monthly</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="billing-toggle" />
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-label"
+            >Annual <span class="pricing-save">Save 20%</span></span
+          >
+        </div>
+
+        <div class="pricing-grid">
+          <div class="card pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Starter</h3>
+              <div class="pricing-price" id="starter-price">$99</div>
+              <div class="pricing-period" id="starter-period">per month</div>
+              <div class="badge badge-primary">For Small Classes</div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Up to 50 students</li>
+                <li>Python & JavaScript grading</li>
+                <li>Basic quiz grading</li>
+                <li>Standard feedback templates</li>
+                <li>Email support</li>
+                <li class="unavailable">LMS integration</li>
+                <li class="unavailable">Custom grading rules</li>
+                <li class="unavailable">API access</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#" class="btn primary">Get Started</a>
+            </div>
+          </div>
+
+          <div class="card pricing-card card-premium">
+            <div class="pricing-highlight">Most Popular</div>
+            <div class="pricing-header">
+              <h3 class="pricing-title">Professional</h3>
+              <div class="pricing-price premium" id="pro-price">$249</div>
+              <div class="pricing-period" id="pro-period">per month</div>
+              <div class="badge badge-secondary">For Departments</div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Up to 200 students</li>
+                <li>All programming languages</li>
+                <li>Advanced quiz grading</li>
+                <li>Custom feedback templates</li>
+                <li>Priority email & chat support</li>
+                <li>LMS integration</li>
+                <li>Custom grading rules</li>
+                <li class="unavailable">API access</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#" class="btn secondary">Get Started</a>
+            </div>
+          </div>
+
+          <div class="card pricing-card card-special">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Enterprise</h3>
+              <div class="pricing-price enterprise" id="enterprise-price">
+                $599
+              </div>
+              <div class="pricing-period" id="enterprise-period">per month</div>
+              <div class="badge badge-accent">For Institutions</div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Unlimited students</li>
+                <li>All programming languages</li>
+                <li>Advanced quiz grading</li>
+                <li>Custom feedback templates</li>
+                <li>24/7 priority support</li>
+                <li>Advanced LMS integration</li>
+                <li>Custom grading rules</li>
+                <li>Full API access</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#" class="btn accent">Contact Sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section">
+      <div class="container">
+        <h2 class="section-title text-center">Plan Comparison</h2>
+        <div class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Starter</th>
+                <th>Professional</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Students</td>
+                <td>Up to 50</td>
+                <td>Up to 200</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Programming Languages</td>
+                <td>Python, JavaScript</td>
+                <td>All Languages</td>
+                <td>All Languages</td>
+              </tr>
+              <tr>
+                <td>Quiz Grading</td>
+                <td>Basic</td>
+                <td>Advanced</td>
+                <td>Advanced</td>
+              </tr>
+              <tr>
+                <td>Feedback Templates</td>
+                <td>Standard</td>
+                <td>Custom</td>
+                <td>Custom</td>
+              </tr>
+              <tr>
+                <td>LMS Integration</td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-check comparison-feature"></i></td>
+                <td><i class="fas fa-check comparison-feature"></i></td>
+              </tr>
+              <tr>
+                <td>Custom Grading Rules</td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-check comparison-feature"></i></td>
+                <td><i class="fas fa-check comparison-feature"></i></td>
+              </tr>
+              <tr>
+                <td>API Access</td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-check comparison-feature"></i></td>
+              </tr>
+              <tr>
+                <td>Support</td>
+                <td>Email</td>
+                <td>Priority Email & Chat</td>
+                <td>24/7 Priority</td>
+              </tr>
+              <tr>
+                <td>Custom Branding</td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-check comparison-feature"></i></td>
+              </tr>
+              <tr>
+                <td>Dedicated Account Manager</td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-times comparison-no-feature"></i></td>
+                <td><i class="fas fa-check comparison-feature"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="enterprise-cta">
+      <div class="container">
+        <h2>Need a Custom Solution?</h2>
+        <p>
+          Our Enterprise plan can be tailored to meet the specific needs of your
+          institution. Contact our sales team to discuss your requirements and
+          get a personalized quote.
+        </p>
+        <a href="index.html#contact" class="btn accent">Contact Sales</a>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-column">
+            <div class="faq-item">
+              <h3 class="faq-question">Can I switch plans later?</h3>
+              <p class="faq-answer">
+                Yes, you can upgrade or downgrade your plan at any time. When
+                upgrading, we'll prorate the remaining time on your current
+                plan. When downgrading, the new rate will apply at the start of
+                your next billing cycle.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-question">Do you offer educational discounts?</h3>
+              <p class="faq-answer">
+                Yes, we offer special pricing for educational institutions.
+                Contact our sales team to learn more about our educational
+                discounts and how to apply.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-question">What payment methods do you accept?</h3>
+              <p class="faq-answer">
+                We accept all major credit cards, PayPal, and can also arrange
+                for purchase orders and invoicing for educational institutions.
+              </p>
+            </div>
+          </div>
+          <div class="faq-column">
+            <div class="faq-item">
+              <h3 class="faq-question">Is there a free trial available?</h3>
+              <p class="faq-answer">
+                Yes, we offer a 14-day free trial for all plans. No credit card
+                required to start your trial. You can explore all features
+                before making a decision.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-question">How do you count students?</h3>
+              <p class="faq-answer">
+                Students are counted as unique users who submit assignments for
+                grading within a billing period. You can add or remove students
+                as needed throughout the academic year.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-question">
+                Can I cancel my subscription anytime?
+              </h3>
+              <p class="faq-answer">
+                Yes, you can cancel your subscription at any time. If you
+                cancel, you'll still have access to your plan until the end of
+                your current billing period.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2><span class="text-gradient">CodeCheck</span> Pro</h2>
+            <p>Automated Grading System</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#how-it-works">How It Works</a></li>
+              <li><a href="index.html#demo">Demo</a></li>
+              <li><a href="terminal-demo.html">Terminal Demo</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="api.html">API Reference</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> info@codecheckpro.com</p>
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 CodeCheck Pro. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Create floating dots
+      document.addEventListener("DOMContentLoaded", function () {
+        const dotsContainer = document.getElementById("floating-dots");
+        const numDots = 20;
+
+        for (let i = 0; i < numDots; i++) {
+          const dot = document.createElement("div");
+          dot.classList.add("dot");
+
+          // Random size between 10px and 50px
+          const size = Math.floor(Math.random() * 40) + 10;
+          dot.style.width = `${size}px`;
+          dot.style.height = `${size}px`;
+
+          // Random position
+          const posX = Math.floor(Math.random() * 100);
+          const posY = Math.floor(Math.random() * 100);
+          dot.style.left = `${posX}%`;
+          dot.style.top = `${posY}%`;
+
+          // Random animation duration between 20s and 40s
+          const duration = Math.floor(Math.random() * 20) + 20;
+          dot.style.animation = `float ${duration}s ease-in-out infinite`;
+
+          // Random animation delay
+          const delay = Math.floor(Math.random() * 10);
+          dot.style.animationDelay = `${delay}s`;
+
+          dotsContainer.appendChild(dot);
+        }
+
+        // Pricing toggle
+        const billingToggle = document.getElementById("billing-toggle");
+        const starterPrice = document.getElementById("starter-price");
+        const proPrice = document.getElementById("pro-price");
+        const enterprisePrice = document.getElementById("enterprise-price");
+        const starterPeriod = document.getElementById("starter-period");
+        const proPeriod = document.getElementById("pro-period");
+        const enterprisePeriod = document.getElementById("enterprise-period");
+
+        billingToggle.addEventListener("change", function () {
+          if (this.checked) {
+            // Annual pricing
+            starterPrice.textContent = "$948";
+            proPrice.textContent = "$2,388";
+            enterprisePrice.textContent = "$5,748";
+            starterPeriod.textContent = "per year";
+            proPeriod.textContent = "per year";
+            enterprisePeriod.textContent = "per year";
+          } else {
+            // Monthly pricing
+            starterPrice.textContent = "$99";
+            proPrice.textContent = "$249";
+            enterprisePrice.textContent = "$599";
+            starterPeriod.textContent = "per month";
+            proPeriod.textContent = "per month";
+            enterprisePeriod.textContent = "per month";
+          }
+        });
+      });
+
+      // Mobile menu toggle
+      document
+        .querySelector(".mobile-menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>
